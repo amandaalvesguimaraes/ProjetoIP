@@ -1,18 +1,17 @@
-package projetoip;
+package sistemaaluguel;
 
 public class Carros {
 	private String modelo;
 	private String cor;
-	private String ano;
+	private int ano;
 	private String placa;
 	private int quantidadeportas;
-	private Carros[] carros;
 	private boolean alugado;
 	private double precodiaria;
 	public Carros() {
 		this.modelo = null;
 		this.cor = null;
-		this.ano = null;
+		this.ano = 0;
 		this.placa = null;
 		this.alugado = false;
 		this.quantidadeportas = 0;
@@ -24,7 +23,7 @@ public class Carros {
 	public String getCor() {
 		return this.cor;
 	}
-	public String getAno() {
+	public int getAno() {
 		return this.ano;
 	}
 	public boolean isAlugado() {
@@ -48,7 +47,7 @@ public class Carros {
 	public void setQuantidadePortas(int a) {
 		this.quantidadeportas = a;
 	}
-	public void setAno(String a) {
+	public void setAno(int a) {
 		this.ano = a;
 	}
 	public void setCor(String a) {
@@ -59,8 +58,7 @@ public class Carros {
 	}
 }
 // PROCEDIMENTO PARA CADASTRAR UM CARRO:
-// primeiro, 'declarar' a vari√°vel pra ser o objeto carro.
-// receber os atributos. no c√≥digo, aplicar essas strings a cada atributo. tipo c.setAno(6564648)
-// depois, pega esse vari√°vel e chama o m√©todo cadastrar em repositoriocontasarray e repositoriocontaslista. no caso da lista, j√° no in√≠cio do main, √© pra declar√°-la.
-// pq s√≥ vai ser uma lista.
-
+// primeiro, 'declarar' a vari·vel pra ser o objeto carro.
+// receber os atributos. no cÛdigo, aplicar essas strings a cada atributo. tipo c.setAno(6564648)
+// depois, pega esse vari·vel e chama o mÈtodo cadastrar em repositoriocontasarray e repositoriocontaslista. no caso da lista, j· no inÌcio do main, È pra declar·-la.
+// pq sÛ vai ser uma lista.
