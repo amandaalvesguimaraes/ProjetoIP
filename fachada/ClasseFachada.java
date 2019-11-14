@@ -1,6 +1,7 @@
 package fachada;
 import dados.*;
 import sistemaaluguel.*;
+import exceptions.*;
 
 public class ClasseFachada {
 	private CadastroCarros cadastrocarro;

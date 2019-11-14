@@ -3,6 +3,7 @@ import java.util.Scanner;
 import dados.*;
 import sistemaaluguel.*;
 import fachada.*;
+import exceptions.*;
 
 public class Programa {
 	

@@ -1,5 +1,6 @@
 package dados;
 import sistemaaluguel.*;
+import exceptions.*;
 
 public class RepositorioCarrosArray implements RepositorioCarros{
 	private int indice;
