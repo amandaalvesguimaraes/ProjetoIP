@@ -8,7 +8,7 @@ public class CadastroAluguel {
 	}
 	
 	public void cadastrar(Aluguel aluguel) throws CJAException, DiaIException{
-		if (alugueis.procurarCarro(aluguel.getCarros()) ==  false) {
+		if (!alugueis.procurarCarro(aluguel.getCarros())) {
 			if  (aluguel.getDias() > 0) {
 				try {
 					clientes.procurar(aluguel.getCliente().getCpf());
@@ -33,4 +33,6 @@ public class CadastroAluguel {
 		}
 	}
 	
+	// faltam outros métodos, como atualizar, procurar aluguel(pode usar como parametro pra procurar aluguel o cpf do cliente ou a placa do carro)
+	// quando tu cadastrar um aluguel, pega o carro e usa nele o método .setAlugado() pq vai mudar o status dele;
 }
