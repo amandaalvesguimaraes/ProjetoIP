@@ -4,9 +4,9 @@ public class RepositorioClientesArray implements RepositorioCliente {
     private Cliente[] clientes;
     private int indice;
 
-    public RepositorioClientesArray() {
-        this.clientes = new Cliente[100000];
-        this.indice = 0;
+    public RepositorioClientesArray(int tamanho) {
+        clientes = new Cliente[tamanho];
+        indice = 0;
     }
 
     public int getIndice(String cpf) throws CNexception {
@@ -26,9 +26,9 @@ public class RepositorioClientesArray implements RepositorioCliente {
 
 
 public void cadastrar(Cliente cliente) throws CPFexception {
-    if(cliente.getCpf().length()> 11 | cliente.getCnh().length()>11){
+    if(cliente.getCpf().length() != 11 | cliente.getCnh().length() != 11){
         throw new CPFexception();
-    }else if (clientes.length == indice) {
+    }else if (clientes.length() == indice) {
             Cliente[] aux = new Cliente[clientes.length * 2];
             for (int i = 0; i < indice; i++) {
                 aux[i] = clientes[i];
