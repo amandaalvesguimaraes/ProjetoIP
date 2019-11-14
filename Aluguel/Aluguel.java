@@ -7,11 +7,11 @@ public class Aluguel{
 	private Vendedor vendedor;
 	private Carros carro;
 	
-	public Aluguel() {
-		this.vendedor = null;
-		this.cliente = null;
-		this.carro = null;
-		this.dias = 0;
+	public Aluguel(Vendedor v, Cliente cl, Carro car, int d) {
+		this.vendedor = v;
+		this.cliente = cl;
+		this.carro = car;
+		this.dias = d;
 		this.valorTotal = this.carro.getPrecoDiaria()+(this.valorFixo*dias);
 	}
 	
