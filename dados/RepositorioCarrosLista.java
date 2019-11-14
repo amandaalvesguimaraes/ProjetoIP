@@ -1,24 +1,23 @@
-package projetoip;
+package dados;
+import sistemaaluguel.*;
 
-public class RepositorioCarrosLista implements RepositorioCarros{
-	private Carros itemcarro; // item carro é o objeto carro.
+public class RepositorioCarrosLista implements RepositorioCarros {
+	private Carros itemcarro;
 	private RepositorioCarrosLista proximo;
-	
 	public RepositorioCarrosLista() {
 		this.itemcarro = null;
 		this.proximo = null;
 	}
-	
-	public void cadastrar(Carros carro) {
+		
+	public void inserir(Carros carro) {
 		if (this.itemcarro == null) {
 			this.itemcarro = carro;
 			this.proximo = new RepositorioCarrosLista();
 		} else {
-			this.proximo.cadastrar(carro);
+			this.proximo.inserir(carro);
 		}
-		
 	}
-
+		
 	public Carros procurar(String p) {
 		if (this.itemcarro.getPlaca().equals(p)) {
 			return this.itemcarro;
@@ -26,10 +25,13 @@ public class RepositorioCarrosLista implements RepositorioCarros{
 			if (this.proximo != null) {
 				if (this.proximo.itemcarro != null) {
 					return this.proximo.procurar(p);
+				} else {
+					return null;
 				}
+			} else {
+				return null;
 			}
 		}
-		return null;
 	}
 
 	public void remover(String p) {
@@ -43,39 +45,56 @@ public class RepositorioCarrosLista implements RepositorioCarros{
 				}
 			}
 		}
-		
 	}
 
 	public boolean existePlaca(String p) {
+		if (this.itemcarro == null) {
+			return false;
+		} else {
+			if (this.itemcarro.getPlaca().equals(p)) {
+				return true;
+			} else {
+				if (this.proximo != null) {
+					if (this.proximo.itemcarro != null) {
+						return this.proximo.existePlaca(p);
+					} else {
+						return false;
+					}
+				} else {
+					return false;
+				}
+			}
+		}
+	}
+
+
+	public void atualizar(Carros carro, String p) {
 		if (this.itemcarro.getPlaca().equals(p)) {
-			return true;
+			this.itemcarro = carro;
 		} else {
 			if (this.proximo != null) {
 				if (this.proximo.itemcarro != null) {
-					return this.proximo.existePlaca(p);
+					this.proximo.atualizar(carro, p);
 				}
 			}
 		}
-		return false;
 	}
 
-	public boolean existeModelo(String m) { // m é o modelo informado pelo cliente.
-		if (this.itemcarro.getModelo().equals(m)) {
-			return true;
+	public boolean isAlugado(String p) {
+		if (this.itemcarro.getPlaca().equals(p)) {
+			return this.itemcarro.isAlugado();
 		} else {
 			if (this.proximo != null) {
 				if (this.proximo.itemcarro != null) {
-					return this.proximo.existePlaca(m);
+					return this.proximo.isAlugado(p);
+				} else {
+					return false;
 				}
+			} else {
+				return false;
 			}
 		}
-		return false;
 	}
-	// criar outra aqui pra retornar o carro modelo.
 
-	@Override
-	public void atualizar(Carros carro, String p) throws PNEException, CCException {
-		// TODO Auto-generated method stub
-		
-	}
+
 }
