@@ -1,4 +1,4 @@
-package sistemaaluguel;
+package exceptions;
 
 public class PNEException extends Exception {
 	public PNEException() {

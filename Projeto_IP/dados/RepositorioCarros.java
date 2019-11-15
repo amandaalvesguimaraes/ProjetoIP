@@ -1,6 +1,5 @@
 package dados;
-import sistemaaluguel.*;
-import exceptions.*;
+import carros.*;
 
 public interface RepositorioCarros {
 	void inserir(Carros carro);
@@ -10,3 +9,4 @@ public interface RepositorioCarros {
 	boolean existePlaca(String p); //placa do carro
 	boolean isAlugado(String p);
 }
+

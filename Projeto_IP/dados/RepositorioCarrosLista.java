@@ -1,10 +1,11 @@
 package dados;
-import sistemaaluguel.*;
-import exceptions.*;
+import carros.*;
+
 
 public class RepositorioCarrosLista implements RepositorioCarros {
 	private Carros itemcarro;
 	private RepositorioCarrosLista proximo;
+	
 	public RepositorioCarrosLista() {
 		this.itemcarro = null;
 		this.proximo = null;

@@ -1,4 +1,4 @@
-package sistemaaluguel;
+package carros;
 
 public class Carros {
 	private String modelo;
@@ -8,14 +8,14 @@ public class Carros {
 	private int quantidadeportas;
 	private boolean alugado;
 	private double precodiaria;
-	public Carros() {
-		this.modelo = null;
-		this.cor = null;
-		this.ano = 0;
-		this.placa = null;
+	public Carros(String m, String c, String p, int a, int qp, double pd) {
+		this.modelo = m;
+		this.cor = c;
+		this.placa = p;
+		this.ano = a;
 		this.alugado = false;
-		this.quantidadeportas = 0;
-		this.precodiaria = 0;
+		this.quantidadeportas = qp;
+		this.precodiaria = pd;
 	}
 	public String getModelo() {
 		return this.modelo;
@@ -56,9 +56,7 @@ public class Carros {
 	public void setModelo(String a) {
 		this.modelo = a;
 	}
+	public void setAlugado() {
+		this.alugado = true;
+	}
 }
-// PROCEDIMENTO PARA CADASTRAR UM CARRO:
-// primeiro, 'declarar' a variável pra ser o objeto carro.
-// receber os atributos. no código, aplicar essas strings a cada atributo. tipo c.setAno(6564648)
-// depois, pega esse variável e chama o método cadastrar em repositoriocontasarray e repositoriocontaslista. no caso da lista, já no início do main, é pra declará-la.
-// pq só vai ser uma lista.

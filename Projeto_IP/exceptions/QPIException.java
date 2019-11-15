@@ -1,5 +1,4 @@
-package sistemaaluguel;
-
+package exceptions;
 
 public class QPIException extends Exception {
 	public QPIException() {
