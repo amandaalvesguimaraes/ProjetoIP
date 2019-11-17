@@ -1,5 +1,8 @@
 package Clientes;
 
+import dados.*;
+import.exceptions.*;
+
 public class CadastroClientes {
 
     private RepositorioCliente clientes;
