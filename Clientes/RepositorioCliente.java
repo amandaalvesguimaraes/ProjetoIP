@@ -1,10 +1,10 @@
 package Clientes;
 
 public interface RepositorioCliente {
-        void cadastrar(Cliente cliente) throws CPFexception, CJCexception;
-        void remover(String cpf) throws CNexception;
-        Cliente procurar(String cpf) throws CNexception;
-        String atualizar(Cliente cliente) throws CNexception, CPFexception;
-        boolean existe(String cpf) throws CNexception;
+        void cadastrar(Clientes cliente);
+        void remover(String cpf);
+        Clientes procurar(String cpf);
+        String atualizar(Clientes cliente) ;
+        boolean existe(String cpf);
 }
 
