@@ -2,7 +2,7 @@ package Clientes;
 
 public class RepositorioClienteLista implements RepositorioCliente {
 
-    private Clientes cliente;
+    private Cliente cliente;
     private RepositorioClienteLista proximo;
 
     public RepositorioClienteLista() {
@@ -11,7 +11,7 @@ public class RepositorioClienteLista implements RepositorioCliente {
     }
 
     @Override
-    public void cadastrar(Clientes cliente) {
+    public void cadastrar(Cliente cliente) {
         if (this.proximo == null) {
             this.cliente = cliente;
             this.proximo = new RepositorioClienteLista();
@@ -46,7 +46,7 @@ public class RepositorioClienteLista implements RepositorioCliente {
     }
 
     @Override
-    public String atualizar(Clientes cliente) {
+    public String atualizar(Cliente cliente) {
         this.cliente = cliente;
         return "Clientes Cliente atualizado com sucesso!";
 

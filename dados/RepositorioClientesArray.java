@@ -2,7 +2,7 @@ package Clientes;
 
 public class RepositorioClientesArray implements RepositorioCliente {
 
-    private Clientes[] clientes;
+    private Cliente[] clientes;
     private int indice;
 
     public RepositorioClientesArray() {
@@ -26,7 +26,7 @@ public class RepositorioClientesArray implements RepositorioCliente {
     }
 
     @Override
-    public void cadastrar(Clientes cliente) {
+    public void cadastrar(Cliente cliente) {
         if (clientes.length == indice) {
             Clientes[] aux = new Clientes[clientes.length * 2];
             for (int i = 0; i < indice; i++) {
@@ -53,7 +53,7 @@ public class RepositorioClientesArray implements RepositorioCliente {
     }
 
     @Override
-    public String atualizar(Clientes cliente) {
+    public String atualizar(Cliente cliente) {
         int i = this.getIndice(cliente.getCpf());
         this.clientes[i] = cliente;
         return "Cliente atualizado com sucesso!";

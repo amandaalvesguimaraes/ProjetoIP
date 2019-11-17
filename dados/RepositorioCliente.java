@@ -1,10 +1,10 @@
 package Clientes;
 
 public interface RepositorioCliente {
-        void cadastrar(Clientes cliente);
+        void cadastrar(Cliente cliente);
         void remover(String cpf);
         Clientes procurar(String cpf);
-        String atualizar(Clientes cliente) ;
+        String atualizar(Cliente cliente) ;
         boolean existe(String cpf);
 }
 

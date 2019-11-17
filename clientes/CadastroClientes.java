@@ -11,7 +11,7 @@ public class CadastroClientes {
         clientes = cliente;
     }
 
-    public void cadastrar(Clientes cliente) throws CJCexception, IDexception {
+    public void cadastrar(Cliente cliente) throws CJCexception, IDexception {
         if (cliente.getCpf().length() != 11 | cliente.getCnh().length() != 11) {
             throw new Clientes.IDexception();
         } else if (clientes.existe(cliente.getCpf()) == false) {
@@ -29,7 +29,7 @@ public class CadastroClientes {
         }
     }
 
-    public Clientes procurar(String cpf) throws CNexception {
+    public Cliente procurar(String cpf) throws CNexception {
         if (clientes.existe(cpf) == false) {
             throw new CNexception();
         } else {
@@ -37,7 +37,7 @@ public class CadastroClientes {
         }
     }
 
-    public void atualizar(Clientes cliente) throws CNexception, IDexception {
+    public void atualizar(Cliente cliente) throws CNexception, IDexception {
         if (cliente.getCpf().length() != 11 | cliente.getCnh().length() != 11) {
             throw new Clientes.CPFexception();
         } else if (clientes.existe(cliente.getCpf() == false)) {
