@@ -1,7 +1,8 @@
-package projetoip;
-//carro cadastrado
+package sistemaaluguel;
+
 public class CCException extends Exception {
 	public CCException() {
-		super ("Carro j√° cadastrado!");
+		super ("Carro j· cadastrado!");
 	}
 }
+
