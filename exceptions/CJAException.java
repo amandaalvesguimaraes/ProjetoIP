@@ -1,3 +1,4 @@
+package Aluguel;
 
 public class CJAException extends Exception {
 	public CJAException() {

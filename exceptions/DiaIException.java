@@ -1,3 +1,4 @@
+package Aluguel;
 
 public class DiaIException extends Exception{
 	public DiaIException() {

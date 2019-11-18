@@ -1,4 +1,5 @@
 
+
 public class Aluguel{
 	private Cliente cliente;
 	private final double valorFixo = 20;
@@ -7,13 +8,13 @@ public class Aluguel{
 	private Vendedor vendedor;
 	private Carros carro;
 	
-	public Aluguel(Vendedor v, Cliente cl, Carro car, int d) {
-		this.vendedor = v;
-		this.cliente = cl;
-		this.carro = car;
-		this.dias = d;
-		this.valorTotal = this.carro.getPrecoDiaria()+(this.valorFixo*dias);
-	}
+	public Aluguel(Vendedor vendedor, Cliente cliente, Carros carro, int dias) {
+		this.vendedor = vendedor;
+		this.cliente = cliente;
+		this.carro = carro;
+		this.dias = dias;
+		this.valorTotal = (this.carro.getPrecoDiaria()*dias)+(this.valorFixo*dias);
+		}
 	
 	public Cliente getCliente() {
 		return cliente;

@@ -1,3 +1,4 @@
+package Aluguel;
 
 public class CNAException extends Exception{
 	public CNAException() {
