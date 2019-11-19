@@ -15,16 +15,16 @@ public class Programa {
 	public static String Menu() {
 		
 		return "\n" + "----- MENU PRINCIPAL -----\n" + "\n"
-		+ "[1] PARA CADASTRAR UM AUTOM”VEL\n" + "[2] PARA REMOVER UM AUTOM”VEL\n" + 
-		"[3] PARA ATUALIZAR UM AUTOM”VEL\n" + "[4] PARA VERIFICAR SE UM AUTOM”VEL EXISTE\n" 
-		+ "[5] PARA VERIFICAR SE UM AUTOM”VEL EST¡ ALUGADO\n" + 
-		"[6] PARA PROCURAR AS ESPECIFICA«’ES DE UM AUTOM”VEL\n" + "[7] PARA CADASTRAR UM VENDEDOR\n" +
+		+ "[1] PARA CADASTRAR UM AUTOM√ìVEL\n" + "[2] PARA REMOVER UM AUTOM√ìVEL\n" + 
+		"[3] PARA ATUALIZAR UM AUTOM√ìVEL\n" + "[4] PARA VERIFICAR SE UM AUTOM√ìVEL EXISTE\n" 
+		+ "[5] PARA VERIFICAR SE UM AUTOM√ìVEL EST√Å ALUGADO\n" + 
+		"[6] PARA PROCURAR AS ESPECIFICA√á√ïES DE UM AUTOM√ìVEL\n" + "[7] PARA CADASTRAR UM VENDEDOR\n" +
 		"[8] PARA DEMITIR UM VENDEDOR\n" + "[9] PARA ATUALIZAR O CADASTRO DE UM VENDEDOR\n" + 
-		"[10] PARA VERIFICAR SE UM VENDEDOR EST¡ CADASTRADO NO SISTEMA\n" + "[11] PARA PROCURAR UM VENDEDOR\n" +
+		"[10] PARA VERIFICAR SE UM VENDEDOR EST√Å CADASTRADO NO SISTEMA\n" + "[11] PARA PROCURAR UM VENDEDOR\n" +
 		"[12] PARA CADASTRAR UM CLIENTE\n" + "[13] PARA REMOVER UM CLIENTE\n" + "[14] PARA ATUALIZAR UM CLIENTE\n" +
-		"[15] PARA VERIFICAR SE UM CLIENTE EST¡ CADASTRADO\n" + "[16] PARA PROCURAR UM CLIENTE\n" + "[17] PARA CADASTRAR UM ALUGUEL\n"+
+		"[15] PARA VERIFICAR SE UM CLIENTE EST√Å CADASTRADO\n" + "[16] PARA PROCURAR UM CLIENTE\n" + "[17] PARA CADASTRAR UM ALUGUEL\n"+
 		"[18] PARA REMOVER UM ALUGUEL\n"+"[19] PARA ATUALIZAR UM ALUGUEL\n" + "[20] PARA PROCURAR UM ALUGUEL A PARTIR DO CPF DE UM CLIENTE\n" +
-		"[21] PARA PROCURAR UM ALUGUEL A PARTIR DA PLACA DO CARRO\n"+ "[22] PARA CHECAR SE EXISTE UM CLIENTE ALUGANDO UM AUTOM”VEL\n" +
+		"[21] PARA PROCURAR UM ALUGUEL A PARTIR DA PLACA DO CARRO\n"+ "[22] PARA CHECAR SE EXISTE UM CLIENTE ALUGANDO UM AUTOM√ìVEL\n" +
 		"[23] PARA CHECAR SE EXISTE UM CARRO SENDO ALUGADO\n" + "[0] PARA SAIR\n"; 
 	
 	}
@@ -40,10 +40,10 @@ public class Programa {
 		return valido;
 	}
 	
-	public static void main(String[] args) throws CCException, QPIException, PDIException, ANException, PNEException, PEException, VCException, MATException, TELException, CPFException, FNEException, MNException, CJCexception, IDexception, CNCException, CJAException, CJACException, CNCException, VNCException, DiaIException, ANEException, CNAException {
+	public static void main(String[] args) throws CCException, QPIException, NPAException, PDIException, ANException, PNEException, PEException, VCException, MATException, TELException, CPFException, FNEException, MNException, CJCexception, IDexception, CNCException, CJAException, CJACException, CNCException, VNCException, DiaIException, ANEException, CNAException {
 		
 		Scanner in = new Scanner(System.in);
-		String resp, a, b, c, e, lr, t, pa, resp1, cnh, data, cpfantigo, cnhantigo; //lr È pra pegar o resto da linha do int //pa È a placa antiga
+		String resp, a, b, c, e, lr, t, pa, resp1, cnh, data, cpfantigo, cnhantigo; //lr √© pra pegar o resto da linha do int //pa √© a placa antiga
 		int qp = 0;
 		int d = 0;
 		int g = 0;
@@ -78,23 +78,23 @@ public class Programa {
 			System.out.println();
 			System.out.println(Menu());
 			do {
-				System.out.print("Digite sua opÁ„o: ");
+				System.out.print("Digite sua op√ß√£o: ");
 				resp = in.nextLine();
 				if (!opcaovalida(resp))
-					System.out.print("OpÁ„o inv·lida! ");
+					System.out.print("Op√ß√£o inv√°lida! ");
 			} while (!opcaovalida(resp));
 			switch (resp) {
 			
 			case "1":
 				
-				System.out.println("VocÍ escolheu CADASTRAR UM AUTOM”VEL.");
-				System.out.print("Digite o modelo do veÌculo: ");
+				System.out.println("Voc√™ escolheu CADASTRAR UM AUTOM√ìVEL.");
+				System.out.print("Digite o modelo do ve√≠culo: ");
 				a = in.nextLine();
-				System.out.print("Digite a cor do veÌculo: ");
+				System.out.print("Digite a cor do ve√≠culo: ");
 				b = in.nextLine();
-				System.out.print("Digite a placa do veÌculo: ");
+				System.out.print("Digite a placa do ve√≠culo: ");
 				c = in.nextLine();
-				System.out.print("Digite o ano do veÌculo: ");
+				System.out.print("Digite o ano do ve√≠culo: ");
 				while (anoinvalido) {
 					if (in.hasNextInt()) {
 						d = in.nextInt();
@@ -102,7 +102,7 @@ public class Programa {
 						anoinvalido = false;
 					} else {
 						lr = in.nextLine();
-						System.out.print("Entrada inv·lida. Digite um valor inteiro para o ano: ");
+						System.out.print("Entrada inv√°lida. Digite um valor inteiro para o ano: ");
 					}
 				}
 				anoinvalido = true;
@@ -114,11 +114,11 @@ public class Programa {
 						portasinvalidas = false;
 					} else {
 						lr = in.nextLine();
-						System.out.print("Entrada inv·lida. Digite um valor inteiro para a quantidade de portas: ");
+						System.out.print("Entrada inv√°lida. Digite um valor inteiro para a quantidade de portas: ");
 					}
 				}
 				portasinvalidas = true;
-				System.out.print("Digite o valor do preÁo da di·ria: ");
+				System.out.print("Digite o valor do pre√ßo da di√°ria: ");
 				while (diariainvalida) {
 					if (in.hasNextDouble()) {
 						pd = in.nextDouble();
@@ -126,7 +126,7 @@ public class Programa {
 						diariainvalida = false;
 					} else {
 						lr = in.nextLine();
-						System.out.print("Entrada inv·lida. Digite um valor numÈrico para o preÁo da di·ria: ");
+						System.out.print("Entrada inv√°lida. Digite um valor num√©rico para o pre√ßo da di√°ria: ");
 					}
 				}
 				diariainvalida = true;
@@ -150,7 +150,7 @@ public class Programa {
 					}
 				}
 				exception = true;
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -160,10 +160,10 @@ public class Programa {
 				}
 				break;
 				
-			case "2": 	// REMOVER UM AUTOM”VEL
+			case "2": 	// REMOVER UM AUTOM√ìVEL
 				
-				System.out.println("VocÍ escolheu REMOVER UM AUTOM”VEL.");
-				System.out.print("Digite a placa do carro que vocÍ deseja remover: ");
+				System.out.println("Voc√™ escolheu REMOVER UM AUTOM√ìVEL.");
+				System.out.print("Digite a placa do carro que voc√™ deseja remover: ");
 				c = in.nextLine();
 				c = c.trim();
 				try {
@@ -175,11 +175,11 @@ public class Programa {
 					if (exception) {
 						System.out.println("Tente novamente!");
 					} else {
-						System.out.println("RemoÁ„o realizada com sucesso!");
+						System.out.println("Remo√ß√£o realizada com sucesso!");
 					}
 				}
 				exception = true;
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -189,20 +189,20 @@ public class Programa {
 				}
 				break;
 				
-			case "3":	//ATUALIZAR UM AUTOM”VEL
+			case "3":	//ATUALIZAR UM AUTOM√ìVEL
 				
-				System.out.println("VocÍ escolheu ATUALIZAR UM AUTOM”VEL.");
-				System.out.print("Digite a placa do carro que vocÍ deseja atualizar: ");
+				System.out.println("Voc√™ escolheu ATUALIZAR UM AUTOM√ìVEL.");
+				System.out.print("Digite a placa do carro que voc√™ deseja atualizar: ");
 				pa = in.nextLine();
 				pa = pa.trim();
 				System.out.println("Reinsira todos os dados do carro");
-				System.out.print("Digite o modelo do veÌculo: ");
+				System.out.print("Digite o modelo do ve√≠culo: ");
 				a = in.nextLine();
-				System.out.print("Digite a cor do veÌculo: ");
+				System.out.print("Digite a cor do ve√≠culo: ");
 				b = in.nextLine();
-				System.out.print("Digite a placa do veÌculo: ");
+				System.out.print("Digite a placa do ve√≠culo: ");
 				c = in.nextLine();
-				System.out.print("Digite o ano do veÌculo: ");
+				System.out.print("Digite o ano do ve√≠culo: ");
 				while (anoinvalido) {
 					if (in.hasNextInt()) {
 						d = in.nextInt();
@@ -210,7 +210,7 @@ public class Programa {
 						lr = in.nextLine();
 					} else {
 						lr = in.nextLine();
-						System.out.print("Entrada inv·lida. Digite um valor inteiro para o ano: ");
+						System.out.print("Entrada inv√°lida. Digite um valor inteiro para o ano: ");
 					}
 				}
 				anoinvalido = true;
@@ -222,11 +222,11 @@ public class Programa {
 						lr = in.nextLine();
 					} else {
 						lr = in.nextLine();
-						System.out.print("Entrada inv·lida. Digite um valor inteiro para a quantidade de portas: ");
+						System.out.print("Entrada inv√°lida. Digite um valor inteiro para a quantidade de portas: ");
 					}
 				}
 				portasinvalidas = true;
-				System.out.print("Digite o valor do preÁo da di·ria: ");
+				System.out.print("Digite o valor do pre√ßo da di√°ria: ");
 				while (diariainvalida) {
 					if (in.hasNextDouble()) {
 						pd = in.nextDouble();
@@ -234,7 +234,7 @@ public class Programa {
 						lr = in.nextLine();
 					} else {
 						lr = in.nextLine();
-						System.out.print("Entrada inv·lida. Digite um valor numÈrico para o preÁo da di·ria: ");
+						System.out.print("Entrada inv√°lida. Digite um valor num√©rico para o pre√ßo da di√°ria: ");
 					}
 				}
 				diariainvalida = true;
@@ -254,15 +254,17 @@ public class Programa {
 					System.out.println(erro.getMessage());
 				} catch (PNEException erro) {
 					System.out.println(erro.getMessage());
+				} catch (NPAException erro) {
+					System.out.println(erro.getMessage());
 				} finally {
 					if (exception) {
 						System.out.println("Tente novamente!");
 					} else {
-						System.out.println("AtualizaÁ„o realizada com sucesso!");
+						System.out.println("Atualiza√ß√£o realizada com sucesso!");
 					}
 				}
 				exception = true;
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -272,18 +274,18 @@ public class Programa {
 				}
 				break;
 				
-			case "4":	// VERIFICAR SE UM AUTOM”VEL EXISTE
+			case "4":	// VERIFICAR SE UM AUTOM√ìVEL EXISTE
 				
-				System.out.println("VocÍ escolheu VERIFICAR SE UM AUTOM”VEL EXISTE.");
-				System.out.print("Digite a placa do automÛvel que vocÍ deseja verificar: ");
+				System.out.println("Voc√™ escolheu VERIFICAR SE UM AUTOM√ìVEL EXISTE.");
+				System.out.print("Digite a placa do autom√≥vel que voc√™ deseja verificar: ");
 				pa = in.nextLine();
 				pa = pa.trim();
 				if (cf.existePlaca(pa)) {
-					System.out.println("O automÛvel existe.");
+					System.out.println("O autom√≥vel existe.");
 				} else {
-					System.out.println("O automÛvel n„o existe.");
+					System.out.println("O autom√≥vel n√£o existe.");
 				}
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -293,17 +295,17 @@ public class Programa {
 				}
 				break;
 				
-			case "5":	// VERIFICAR SE UM AUTOM”VEL EST¡ ALUGADO
+			case "5":	// VERIFICAR SE UM AUTOM√ìVEL EST√Å ALUGADO
 				
-				System.out.println("VocÍ escolheu VERIFICAR SE UM AUTOM”VEL EST¡ ALUGADO.");
-				System.out.print("Digite a placa do automÛvel que vocÍ deseja verificar: ");
+				System.out.println("Voc√™ escolheu VERIFICAR SE UM AUTOM√ìVEL EST√Å ALUGADO.");
+				System.out.print("Digite a placa do autom√≥vel que voc√™ deseja verificar: ");
 				pa = in.nextLine();
 				pa = pa.trim();
 				try {
 					if (cf.isAlugado(pa)) {
-						System.out.println("O automÛvel est· alugado.");
+						System.out.println("O autom√≥vel est√° alugado.");
 					} else {
-						System.out.println("O automÛvel n„o est· alugado.");
+						System.out.println("O autom√≥vel n√£o est√° alugado.");
 					}
 					exception = false;
 				} catch (PNEException erro) {
@@ -314,7 +316,7 @@ public class Programa {
 					}
 				}
 				exception = true;
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -324,10 +326,10 @@ public class Programa {
 				}
 				break;
 				
-			case "6":	//PROCURAR UM AUTOM”VEL
+			case "6":	//PROCURAR UM AUTOM√ìVEL
 				
-				System.out.println("VocÍ escolheu PROCURAR UM AUTOM”VEL.");
-				System.out.print("Digite a placa do automÛvel que vocÍ deseja procurar especificaÁıes: ");
+				System.out.println("Voc√™ escolheu PROCURAR UM AUTOM√ìVEL.");
+				System.out.print("Digite a placa do autom√≥vel que voc√™ deseja procurar especifica√ß√µes: ");
 				pa = in.nextLine();
 				pa = pa.trim();
 				Carros car = null;
@@ -347,8 +349,8 @@ public class Programa {
 				System.out.println("PLACA: " + car.getPlaca());
 				System.out.println("QUANTIDADE DE PORTAS: " + car.getQuantidadePortas());
 				System.out.println("ANO: " + car.getAno());
-				System.out.println("PRE«O DA DI¡RIA: " + car.getPrecoDiaria());
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.println("PRE√áO DA DI√ÅRIA: " + car.getPrecoDiaria());
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equalsIgnoreCase("s")) {
@@ -360,7 +362,7 @@ public class Programa {
 			
 			case "7":
 				
-				System.out.println("VocÍ escolheu CADASTRAR UM VENDEDOR.");
+				System.out.println("Voc√™ escolheu CADASTRAR UM VENDEDOR.");
 				System.out.print("Digite o nome do vendedor: ");
 				a = in.nextLine();
 				a = a.trim();
@@ -370,7 +372,7 @@ public class Programa {
 				System.out.print("Digite o telefone do vendedor: ");
 				c = in.nextLine();
 				c = c.trim();
-				System.out.print("Digite a matrÌcula do vendedor: ");
+				System.out.print("Digite a matr√≠cula do vendedor: ");
 				while (matinvalido) {
 					if (in.hasNextInt()) {
 						g = in.nextInt();
@@ -378,7 +380,7 @@ public class Programa {
 						matinvalido = false;
 					} else {
 						lr = in.nextLine();
-						System.out.print("Entrada inv·lida. Digite um valor inteiro para a matrÌcula: ");
+						System.out.print("Entrada inv√°lida. Digite um valor inteiro para a matr√≠cula: ");
 					}
 				}
 				matinvalido = true;
@@ -402,7 +404,7 @@ public class Programa {
 					}
 				}
 				exception = true;
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -414,8 +416,8 @@ public class Programa {
 				
 			case "8": 
 				
-				System.out.println("VocÍ escolheu DEMITIR UM VENDEDOR");
-				System.out.print("Digite a matrÌcula do vendedor: ");
+				System.out.println("Voc√™ escolheu DEMITIR UM VENDEDOR");
+				System.out.print("Digite a matr√≠cula do vendedor: ");
 				while (matinvalido) {
 					if (in.hasNextInt()) {
 						g = in.nextInt();
@@ -423,7 +425,7 @@ public class Programa {
 						matinvalido = false;
 					} else {
 						lr = in.nextLine();
-						System.out.print("Entrada inv·lida. Digite um valor inteiro para a matrÌcula: ");
+						System.out.print("Entrada inv√°lida. Digite um valor inteiro para a matr√≠cula: ");
 					}
 				}
 				matinvalido = true;
@@ -436,11 +438,11 @@ public class Programa {
 					if (exception) {
 						System.out.println("Tente novamente!");
 					} else {
-						System.out.println("RemoÁ„o realizada com sucesso!");
+						System.out.println("Remo√ß√£o realizada com sucesso!");
 					}
 				}
 				exception = true;
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -452,7 +454,7 @@ public class Programa {
 				
 			case "9":
 				
-				System.out.println("VocÍ escolheu ATUALIZAR O CADASTRO DE UM VENDEDOR");
+				System.out.println("Voc√™ escolheu ATUALIZAR O CADASTRO DE UM VENDEDOR");
 				System.out.print("Digite o nome do vendedor: ");
 				a = in.nextLine();
 				a = a.trim();
@@ -462,7 +464,7 @@ public class Programa {
 				System.out.print("Digite o telefone do vendedor: ");
 				c = in.nextLine();
 				c = c.trim();
-				System.out.print("Digite a matrÌcula NOVA do vendedor: ");
+				System.out.print("Digite a matr√≠cula NOVA do vendedor: ");
 				while (matinvalido) {
 					if (in.hasNextInt()) {
 						g = in.nextInt();
@@ -470,11 +472,11 @@ public class Programa {
 						matinvalido = false;
 					} else {
 						lr = in.nextLine();
-						System.out.print("Entrada inv·lida. Digite um valor inteiro para a matrÌcula: ");
+						System.out.print("Entrada inv√°lida. Digite um valor inteiro para a matr√≠cula: ");
 					}
 				}
 				matinvalido = true;
-				System.out.print("Digite a matrÌcula ANTIGA do vendedor: "); //TIREI O LN!!!!
+				System.out.print("Digite a matr√≠cula ANTIGA do vendedor: "); //TIREI O LN!!!!
 				while (matinvalido) {
 					if (in.hasNextInt()) {
 						ga = in.nextInt();
@@ -482,7 +484,7 @@ public class Programa {
 						matinvalido = false;
 					} else {
 						lr = in.nextLine();
-						System.out.print("Entrada inv·lida. Digite um valor inteiro para a matrÌcula: ");
+						System.out.print("Entrada inv√°lida. Digite um valor inteiro para a matr√≠cula: ");
 					}
 				}
 				matinvalido = true;
@@ -504,11 +506,11 @@ public class Programa {
 					if (exception) {
 						System.out.println("Tente novamente!");
 					} else {
-						System.out.println("AtualizaÁ„o realizada com sucesso!");
+						System.out.println("Atualiza√ß√£o realizada com sucesso!");
 					}
 				}
 				exception = true;
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: "); //ADICIONEI ESSA OP«√O
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: "); //ADICIONEI ESSA OP√á√ÉO
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -520,8 +522,8 @@ public class Programa {
 			
 			case "10":
 				
-				System.out.println("VocÍ escolheu VERIFICAR SE UM VENDEDOR EST¡ CADASTRADO.");
-				System.out.print("Digite a matrÌcula do vendedor: ");
+				System.out.println("Voc√™ escolheu VERIFICAR SE UM VENDEDOR EST√Å CADASTRADO.");
+				System.out.print("Digite a matr√≠cula do vendedor: ");
 				while (matinvalido) {
 					if (in.hasNextInt()) {
 						g = in.nextInt();
@@ -529,16 +531,16 @@ public class Programa {
 						matinvalido = false;
 					} else {
 						lr = in.nextLine();
-						System.out.print("Entrada inv·lida. Digite um valor inteiro para a matrÌcula: ");
+						System.out.print("Entrada inv√°lida. Digite um valor inteiro para a matr√≠cula: ");
 					}
 				}
 				matinvalido = true;
 				if (cf.existeVendedor(g)) {
 					System.out.println("O vendedor existe.");
 				} else {
-					System.out.println("O vendedor n„o existe.");
+					System.out.println("O vendedor n√£o existe.");
 				}
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -550,8 +552,8 @@ public class Programa {
 				
 			case "11":
 				
-				System.out.println("VocÍ escolheu PROCURAR UM VENDEDOR.");
-				System.out.print("Digite a matrÌcula do vendedor: ");
+				System.out.println("Voc√™ escolheu PROCURAR UM VENDEDOR.");
+				System.out.print("Digite a matr√≠cula do vendedor: ");
 				while (matinvalido) {
 					if (in.hasNextInt()) {
 						g = in.nextInt();
@@ -559,7 +561,7 @@ public class Programa {
 						matinvalido = false;
 					} else {
 						lr = in.nextLine();
-						System.out.print("Entrada inv·lida. Digite um valor inteiro para a matrÌcula: ");
+						System.out.print("Entrada inv√°lida. Digite um valor inteiro para a matr√≠cula: ");
 					}
 				}
 				matinvalido = true;
@@ -578,8 +580,8 @@ public class Programa {
 				System.out.println(ven.getNome());
 				System.out.println("CPF: " + ven.getCpf());
 				System.out.println("TELEFONE: " + ven.getTelefone());
-				System.out.println("MATRÕCULA: " + ven.getMatricula());
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.println("MATR√çCULA: " + ven.getMatricula());
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equalsIgnoreCase("s")) {
@@ -591,7 +593,7 @@ public class Programa {
 				
 			case "12":
 				
-				System.out.println("VocÍ escolheu CADASTRAR UM CLIENTE");
+				System.out.println("Voc√™ escolheu CADASTRAR UM CLIENTE");
 				System.out.print("Digite o nome do cliente: ");
 				a = in.nextLine();
 				a = a.trim();
@@ -623,7 +625,7 @@ public class Programa {
 					}
 				}
 				exception = true;
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -635,7 +637,7 @@ public class Programa {
 				
 			case "13":
 				
-				System.out.println("VocÍ escolheu REMOVER UM CLIENTE");
+				System.out.println("Voc√™ escolheu REMOVER UM CLIENTE");
 				System.out.print("Digite o cpf do cliente: ");
 				a = in.nextLine();
 				a = a.trim();
@@ -648,11 +650,11 @@ public class Programa {
 					if (exception) {
 						System.out.println("Tente novamente!");
 					} else {
-						System.out.println("RemoÁ„o realizada com sucesso!");
+						System.out.println("Remo√ß√£o realizada com sucesso!");
 					}
 				}
 				exception = true;
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -664,7 +666,7 @@ public class Programa {
 				
 			case "14":
 				
-				System.out.println("VocÍ escolheu ATUALIZAR O CADASTRO DE UM CLIENTE");
+				System.out.println("Voc√™ escolheu ATUALIZAR O CADASTRO DE UM CLIENTE");
 				System.out.print("Digite o nome do cliente: ");
 				a = in.nextLine();
 				a = a.trim();
@@ -700,11 +702,11 @@ public class Programa {
 					if (exception) {
 						System.out.println("Tente novamente!");
 					} else {
-						System.out.println("AtualizaÁ„o realizada com sucesso!");
+						System.out.println("Atualiza√ß√£o realizada com sucesso!");
 					}
 				}
 				exception = true;
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -716,16 +718,16 @@ public class Programa {
 				
 			case "15":
 				
-				System.out.println("VocÍ escolheu VERIFICAR SE UM CLIENTE EST¡ CADASTRADO");
+				System.out.println("Voc√™ escolheu VERIFICAR SE UM CLIENTE EST√Å CADASTRADO");
 				System.out.print("Digite o cpf do cliente: ");
 				a = in.nextLine();
 				a = a.trim();
 				if (cf.existeCliente(a)) {
-					System.out.println("O cliente est· cadastrado.");
+					System.out.println("O cliente est√° cadastrado.");
 				} else {
-					System.out.println("O cliente n„o est· cadastrado.");
+					System.out.println("O cliente n√£o est√° cadastrado.");
 				}
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -737,7 +739,7 @@ public class Programa {
 				
 			case "16":
 				
-				System.out.println("VocÍ escolheu PROCURAR UM CLIENTE");
+				System.out.println("Voc√™ escolheu PROCURAR UM CLIENTE");
 				System.out.print("Digite o cpf do cliente: ");
 				a = in.nextLine();
 				a = a.trim();
@@ -758,7 +760,7 @@ public class Programa {
 				System.out.println("CNH: "+client.getCnh());
 				System.out.println("DATA: "+client.getData());
 				System.out.println("TELEFONE: "+client.getTelefone());
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -770,8 +772,8 @@ public class Programa {
 			
 			case "17":
 				
-				System.out.println("VocÍ escolheu CADASTRAR UM ALUGUEL");
-				System.out.print("Digite a matrÌcula do vendedor: ");
+				System.out.println("Voc√™ escolheu CADASTRAR UM ALUGUEL");
+				System.out.print("Digite a matr√≠cula do vendedor: ");
 				while (matinvalido) {
 					if (in.hasNextInt()) {
 						g = in.nextInt();
@@ -779,7 +781,7 @@ public class Programa {
 						matinvalido = false;
 					} else {
 						lr = in.nextLine();
-						System.out.print("Entrada inv·lida. Digite um valor inteiro para a matrÌcula: ");
+						System.out.print("Entrada inv√°lida. Digite um valor inteiro para a matr√≠cula: ");
 					}
 				}
 				matinvalido = true;
@@ -802,7 +804,7 @@ public class Programa {
 						diasinvalidos = false;
 					} else {
 						lr = in.nextLine();
-						System.out.print("Entrada inv·lida. Digite um valor inteiro para os dias: ");
+						System.out.print("Entrada inv√°lida. Digite um valor inteiro para os dias: ");
 					}
 				}
 				diasinvalidos = true;
@@ -830,7 +832,7 @@ public class Programa {
 					}
 				}
 				exception = true;
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -842,7 +844,7 @@ public class Programa {
 				
 			case "18":
 				
-				System.out.println("VocÍ escolheu REMOVER UM ALUGUEL");
+				System.out.println("Voc√™ escolheu REMOVER UM ALUGUEL");
 				System.out.print("Digite o CPF do cliente: ");
 				a = in.nextLine();
 				a = a.trim();
@@ -857,11 +859,11 @@ public class Programa {
 					if (exception) {
 						System.out.println("Tente novamente!");
 					} else {
-						System.out.println("RemoÁ„o realizada com sucesso!");
+						System.out.println("Remo√ß√£o realizada com sucesso!");
 					}
 				}
 				exception = true;
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -873,7 +875,7 @@ public class Programa {
 				
 			case "19":
 				
-				System.out.println("VocÍ escolheu ATUALIZAR UM ALUGUEL");
+				System.out.println("Voc√™ escolheu ATUALIZAR UM ALUGUEL");
 				System.out.print("Digite o CPF cadastrado anteriormente: ");
 				cpfantigo = in.nextLine();
 				cpfantigo = cpfantigo.trim();
@@ -881,7 +883,7 @@ public class Programa {
 				pa = in.nextLine();
 				pa = pa.trim();
 				System.out.println("Reinsira os novos dados: ");
-				System.out.print("Digite a matrÌcula do vendedor: ");
+				System.out.print("Digite a matr√≠cula do vendedor: ");
 				while (matinvalido) {
 					if (in.hasNextInt()) {
 						g = in.nextInt();
@@ -889,7 +891,7 @@ public class Programa {
 						matinvalido = false;
 					} else {
 						lr = in.nextLine();
-						System.out.print("Entrada inv·lida. Digite um valor inteiro para a matrÌcula: ");
+						System.out.print("Entrada inv√°lida. Digite um valor inteiro para a matr√≠cula: ");
 					}
 				}
 				matinvalido = true;
@@ -943,7 +945,7 @@ public class Programa {
 						diasinvalidos = false;
 					} else {
 						lr = in.nextLine();
-						System.out.print("Entrada inv·lida. Digite um valor inteiro para os dias: ");
+						System.out.print("Entrada inv√°lida. Digite um valor inteiro para os dias: ");
 					}
 				}
 				diasinvalidos = true;
@@ -967,11 +969,11 @@ public class Programa {
 					if (exception) {
 						System.out.println("Tente novamente!");
 					} else {
-						System.out.println("AtualizaÁ„o realizada com sucesso!");
+						System.out.println("Atualiza√ß√£o realizada com sucesso!");
 					}
 				}
 				exception = true;
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -983,7 +985,7 @@ public class Programa {
 				
 			case "20":
 				
-				System.out.println("VocÍ escolheu PROCURAR CADASTRO DE ALUGUEL A PARTIR DO CPF DO CLIENTE");
+				System.out.println("Voc√™ escolheu PROCURAR CADASTRO DE ALUGUEL A PARTIR DO CPF DO CLIENTE");
 				System.out.print("Digite o CPF do cliente: ");
 				a = in.nextLine();
 				a = a.trim();
@@ -1006,9 +1008,9 @@ public class Programa {
 				System.out.println("MODELO DO CARRO: "+a1.getCarros().getModelo());
 				System.out.println("PLACA: "+a1.getCarros().getPlaca());
 				System.out.println(a1.getVendedor().getNome());
-				System.out.println("MATRÕCULA: "+a1.getVendedor().getMatricula());
+				System.out.println("MATR√çCULA: "+a1.getVendedor().getMatricula());
 				System.out.println("VALOR TOTAL DO ALUGUEL: R$"+a1.getValorTotal());
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -1020,7 +1022,7 @@ public class Programa {
 			
 			case "21":
 				
-				System.out.println("VocÍ escolheu PROCURAR CADASTRO DE ALUGUEL A PARTIR DA PLACA DO CARRO");
+				System.out.println("Voc√™ escolheu PROCURAR CADASTRO DE ALUGUEL A PARTIR DA PLACA DO CARRO");
 				System.out.print("Digite a placa do carro: ");
 				a = in.nextLine();
 				a = a.trim();
@@ -1043,9 +1045,9 @@ public class Programa {
 				System.out.println("MODELO DO CARRO: "+a2.getCarros().getModelo());
 				System.out.println("PLACA: "+a2.getCarros().getPlaca());
 				System.out.println(a2.getVendedor().getNome());
-				System.out.println("MATRÕCULA: "+a2.getVendedor().getMatricula());
+				System.out.println("MATR√çCULA: "+a2.getVendedor().getMatricula());
 				System.out.println("VALOR TOTAL DO ALUGUEL: R$"+a2.getValorTotal());
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -1057,15 +1059,15 @@ public class Programa {
 				
 			case "22":
 				
-				System.out.println("VocÍ escolheu CHECAR SE UM CLIENTE EST¡ ALUGANDO UM CARRO");
+				System.out.println("Voc√™ escolheu CHECAR SE UM CLIENTE EST√Å ALUGANDO UM CARRO");
 				System.out.print("Digite o cpf do cliente: ");
 				a = in.nextLine();
 				a = a.trim();
 				try {
 					if (cf.existeClienteAlugando(a)) {
-						System.out.println("O cliente est· alugando um carro.");
+						System.out.println("O cliente est√° alugando um carro.");
 					} else {
-						System.out.println("O cliente n„o est· alugando um carro.");
+						System.out.println("O cliente n√£o est√° alugando um carro.");
 					}
 					exception = false;
 				} catch (CNCException erro) {
@@ -1076,7 +1078,7 @@ public class Programa {
 					}
 				}
 				exception = true;
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -1088,15 +1090,15 @@ public class Programa {
 				
 			case "23":
 				
-				System.out.println("VocÍ escolheu CHECAR SE UM CARRO EST¡ SENDO ALUGADO");
+				System.out.println("Voc√™ escolheu CHECAR SE UM CARRO EST√Å SENDO ALUGADO");
 				System.out.println("Digite a placa do carro: ");
 				a = in.nextLine();
 				a = a.trim();
 				try {
 					if (cf.existeCarroAlugado(a)) {
-						System.out.println("O carro est· sendo alugado no momento.");
+						System.out.println("O carro est√° sendo alugado no momento.");
 					} else {
-						System.out.println("O carro n„o est· sendo alugado no momento.");
+						System.out.println("O carro n√£o est√° sendo alugado no momento.");
 					}
 					exception = false;
 				} catch (PNEException erro) {
@@ -1107,7 +1109,7 @@ public class Programa {
 					}
 				}
 				exception = true;
-				System.out.print("Se deseja realizar outra operaÁ„o, digite [s]: ");
+				System.out.print("Se deseja realizar outra opera√ß√£o, digite [s]: ");
 				resp1 = in.nextLine();
 				resp1 = resp1.trim();
 				if (resp1.equals("s")) {
@@ -1124,7 +1126,7 @@ public class Programa {
 				
 			}
 		}
-		System.out.println("VocÍ escolheu SAIR");
+		System.out.println("Voc√™ escolheu SAIR");
 	}
 }
 
