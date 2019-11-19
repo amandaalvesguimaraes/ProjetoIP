@@ -46,11 +46,31 @@ private RepositorioCarros carros;
 			throw new PNEException();
 		}
 	}
-	
-	public void atualizar(Carros carro, String pa) throws PEException, CCException, PNEException, QPIException, PDIException, ANException { //p é a nova placa e pa é a placa antiga
-		if (!carro.getPlaca().equals(pa)) {
-			if (carros.existePlaca(carro.getPlaca())) {
-				throw new PEException();
+	// add NPAException
+	public void atualizar(Carros carro, String pa) throws PEException, NPAException, CCException, PNEException, QPIException, PDIException, ANException { //p Ã© a nova placa e pa Ã© a placa antiga
+		if (carros.existePlaca(pa)) {
+			if (!carro.getPlaca().equals(pa)) {
+				if (carros.existePlaca(carro.getPlaca())) {
+					throw new PEException();
+				} else {
+					if (carros.isAlugado(pa)) {
+						throw new NPAException();
+					} else {
+						if (carro.getQuantidadePortas() <= 0) {
+							throw new QPIException();
+						} else {
+							if (carro.getPrecoDiaria() <= 0) {
+								throw new PDIException();
+							} else {
+								if (carro.getAno() <= 0) {
+									throw new ANException();
+								} else {
+									carros.atualizar(carro, pa);
+								}
+							}
+						}
+					}
+				}
 			} else {
 				if (carro.getQuantidadePortas() <= 0) {
 					throw new QPIException();
@@ -67,22 +87,10 @@ private RepositorioCarros carros;
 				}
 			}
 		} else {
-			if (carro.getQuantidadePortas() <= 0) {
-				throw new QPIException();
-			} else {
-				if (carro.getPrecoDiaria() <= 0) {
-					throw new PDIException();
-				} else {
-					if (carro.getAno() <= 0) {
-						throw new ANException();
-					} else {
-						Carros carroc = procurar(pa);
-						carroc = carro;
-					}
-				}
-			}
+			throw new PNEException();	
 		}
 	}
+	
 	
 	public boolean isAlugado(String p) throws PNEException {
 		if (carros.existePlaca(p)) {
